@@ -1,10 +1,39 @@
-.reloj{
-    padding: 23px;
-    background: black;
-    display: flex;
-    color: white;
-    font-size: 130px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+ .l1 {
+     background-color: red;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     margin: auto;
+ }
+ .l3 {
+    background-color: green;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
 }
+
+ .l2 {
+     background-color: orange;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     margin: auto;
+ }
+
+ .caja {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80px;
+    height: 230px;
+    background-color: rgb(21, 16, 24);
+    border: 1px solid rgb(129, 127, 127);
+}
+
+ .marca {
+     box-shadow: 0px 0px 40px white;
+ }
+ body {
+    background-color: darkslategrey;
+ }

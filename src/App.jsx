@@ -1,25 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./styles/index.scss";
+import React, { useState } from "react";
 
 
-const App = props => {
-	const { seg } = props;
+//create your first component
+const TrafficLight = () => {
+	const [luz, cambiarLuz] = useState("l1")
 	return (
-		<div className="reloj">
-			<i className="far fa-clock icono"></i>
-			{String(seg)
-				.padStart(6, "0")
-				.split("")
-				.map((number, index) => (
-					<div className="modulo" key={index}>
-						{number}
-					</div>
-				))}
-		</div>
+		<span>
+			<span className="span">
+				<span className="caja">
+					{/*Luz Roja*/}
+					<button onClick={() => { cambiarLuz("l1") }} className={" l1 " + (luz === "l1" ? " marca " : " ")}></button>
+					{/*Luz Naranja*/}
+					<button onClick={() => { cambiarLuz("l2") }} className={" l2 " + (luz === "l2" ? " marca"  : " ")}></button>
+					{/*Luz Verde*/}
+					<button onClick={() => { cambiarLuz("l3") }} className={" l3 " + (luz === "l3" ? " marca " : " ")}></button>
+				</span>
+			</span>
+
+		</span>
 	);
-};
-App.propTypes = {
-	seg: PropTypes.func
-};
-export default App;
+}
+
+export default TrafficLight

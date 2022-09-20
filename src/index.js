@@ -1,15 +1,11 @@
+//import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.jsx";
+
 import "./styles/index.scss";
 
-let seg = 0;
+//import your own components
+import TrafficLight from "./App";
 
-setInterval(() => {
-	ReactDOM.render(
-		<App 
-		seg={seg} />,
-		document.querySelector("#root")
-	);
-	seg += 1;
-}, 1000);
+//render your react application
+ReactDOM.render(<TrafficLight />, document.querySelector("#app"));
